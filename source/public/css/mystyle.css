@@ -1,0 +1,483 @@
+* {
+  margin:0px;
+  padding: 0px;
+}
+.jumbotron{
+  background:linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ), url("../img/backgound.jpeg") ;
+  min-height: 100% !important;
+  min-width: 100% !important;
+  text-align: center;
+  margin:0px;
+  padding:0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+html {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  margin:0px !important;
+  padding:0px !important;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+ /* overflow-y:hidden;*/
+}
+font {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+header{
+  margin:0px !important;
+  padding:0px !important;
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+.welcome-header{
+  position:relative;
+}
+
+.welcome-footer{
+  position: absolute;
+  bottom:0%;
+}
+body{
+  margin:0px;
+  padding:0px;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+/*  overflow-y:hidden;*/
+}
+p{
+  margin:0;
+  padding:0;
+}
+.content-body{
+    background: url('../img/secondBackground.png');
+}
+a{
+    cursor: hand !important; 
+}
+.button{
+    background-color: transparent;
+    color: #ff4d4d; /* white */
+    padding: 13px 30px;
+    border: 2px solid #ff4d4d; /* dark peach */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+.button:hover { 
+    background-color: #ff4d4d;  /* dark peach */
+    background-repeat:no-repeat;
+    padding: 15px 32px;
+    border: none;
+    color: #fff;    
+    overflow: hidden;
+    outline:none;
+}
+.button-get-started{
+  background-color: #262626;/* dark peach */
+    border: none;
+    color: #ffffff; /* white */
+    padding: 12px 29px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+}
+.button-get-started:hover { 
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 9px 26px;
+    color: #262626; 
+    border: 3px solid #262626; /* dark peach */
+    overflow: hidden;
+    outline:none;
+}
+.buttonSmall{
+    background-color: #ff4d4d; /* dark peach */
+    border: none;
+    color: #ffffff; /* white */
+    padding: 5px 19px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button-round{
+  background-color: transparent; /* dark peach */
+     margin-left:5px;
+    color: #bfbfbf; /* white */
+    padding:10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.button-round:hover{
+  background-color: transparent; /* dark peach */
+    color: #ff4d4d; /* white */
+    padding:10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 50%;
+    /*-moz-border-radius: 35px;
+  -webkit-border-radius: 35px;*/
+}
+.btn-facebook{
+  border: 2px solid #003366;
+}
+.btn-facebook:hover{
+  background-color:#003366;
+}
+.btn-facebook >i{
+  color:#003366;
+}
+.btn-facebook:hover >i{
+  color:white;
+}
+.btn-google{
+  border: 2px solid #db3236;
+}
+.btn-google:hover{
+  background-color:#db3236;
+}
+.btn-google >i{
+  color:#db3236;
+}
+.btn-google:hover >i{
+  color:white;
+}
+.btn-twitter{
+  border: 2px solid #3399ff;
+}
+.btn-twitter:hover{
+  background-color:#3399ff;
+}
+.btn-twitter>i{
+  color:#3399ff;
+}
+.btn-twitter:hover > i{
+    color:white;
+}
+.glyphicon-menu-down{
+  font-size: 40px;
+  color: #ffe6e6;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+a:hover {
+  text-decoration: none;
+}
+.connect-panel{
+  min-height: 50px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+}
+.glyphicon:before {
+  	margin-right: 5px;
+}
+.row{
+	margin: 0px 0px 0px 0px;
+}
+.navbar {
+  background:transparent;
+  margin-bottom: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border:0px;
+}
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: #ff6666;
+    border-radius: 0px;
+}
+.navbarcolor {
+  background:white;
+  min-height: 70px;
+  border-bottom:1px solid #f3e5d8;
+}
+.tab-content{
+  background-color:white;
+	border-left: 1px solid #999999;
+	color:#bfbfbf;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	padding: 40px;
+}
+.nav-tabs > li > a:hover{
+border-bottom: 0px solid transparent;
+	background-color:transparent;
+	color:#ff4d4d;
+}
+.nav-tabs{
+	margin: 0;
+    padding: 0;
+    border: 1px solid #999999;
+	background-color:white;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+border-bottom: 0px solid transparent;
+    background-color: transparent !important;
+}
+.nav-tabs > li.active{
+	border-bottom: 0px solid transparent;
+	border-top: 3px solid #ff4d4d;
+}
+
+.nav-tabs > li{
+    background-color:transparent;
+}
+.nav-tabs > li > a > span > strong > font{
+    color:#595959;
+}
+.nav-tabs > li.active > a > span > strong > font{
+    color:#ff4d4d;
+}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 0px;
+    right: 10px;
+}
+.left-inner-addon span {
+    position: absolute;
+    padding: 10px 0px;
+    right: 10px;
+}
+
+hr{ 
+	width: 30%; 
+	height: 1px; 
+	background-color:#ff4d4d;
+	border: 0 none;
+	margin: 1em auto; 
+}
+hr.login-hr{
+  width:90% !important;
+}
+.logo-large{
+  height:60px;
+   width:170px;
+}
+a.navbar-brand{
+  padding: 0px;
+}
+/*
+Don't know what does removing the below code break but it certainly breaks something sope beware
+
+
+input[type="text"],input[type="password"] {
+  background-color:transparent;
+  color:black;
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus,input[type="password"]:focus {
+  outline: none;
+}
+
+*/
+.style-1 input[type="text"],.style-1 input[type="password"] {
+  padding: 10px;
+  border: solid 1px #999999;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus,.style-1 input[type="password"]:focus,.style-1 input[type="password"].focus {
+  border: solid 1px #999999;
+  box-shadow: 0 0 5px 1px #969696;
+}
+.button-social-icon{
+  padding:10px;
+  color:#ff4d4d;
+  font-size: 18px;
+  margin-left: 1px solid #f3e5d8;
+}
+.navbar-toggler{
+ background-color: white;
+   color:black;
+  padding: 5px 7px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  border-style:1px solid black;
+}
+.navbar-toggle{
+  background-color: transparent;
+  border-radius: 0px;
+}
+.the_last_row{
+  background-color: #1a1a1a;
+  min-height:52px;
+  padding:15px;
+
+}
+.navbar-fixed-top{
+  margin-bottom:20px;
+  
+}
+.container{
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+.container-fluid{
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+.col{
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+.nav-stacked{
+  background-color: #1a1a1a;
+  position: absolute;
+  z-index: 110;
+  width: 150px;
+  margin-left:0px;
+  margin-top:0px;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+/*
+.searchBar .query{
+  background-color: red;
+  display:block;
+  margin: auto;
+  width: 100%;
+  height: 100;
+  font-family: sans-serif;
+  font-size: 20px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  border-bottom: 2px solid #ff4d4d;
+  padding: 5px;
+}
+*/
+.text-centered{
+  text-align:center;
+}
+.connect-panel .button-social-icon{
+  padding:10px;
+  color: #e6e6e6;
+  font-size: 35px;
+}
+.connect-panel .button-social-icon:hover{
+  padding:10px;
+  color:white;
+  font-size: 35px;
+}
+.container-fluid{
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+#first-true-content{
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  min-height: 100%;
+}
+.navbar-default {
+  border-radius: 0px;
+}
+#start{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.forgot-password {
+  text-align: right;
+}
+.form-horizontal .checkbox{
+  padding-top: 0px;
+}
+div.welcome{
+  width: 100% !important;
+  padding: 0px !important;
+}
+div.navbar-header.welcome{
+  margin:0px;
+}
+@media (min-width: 20px) and (max-width: 264px) {
+  .button-round{      
+    padding:3px;
+    font-size: 20px;
+  }
+  .button-round:hover{
+
+    padding:3px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 265px) and (max-width: 269px) {
+    .button-round{      
+      padding:6px;
+      font-size: 20px;
+    }
+    .button-round:hover{
+
+      padding:6px;
+      font-size: 20px;
+    }
+}
+
+@media (min-width: 270px) and (max-width: 288px) {
+  .button-round{      
+    padding:7px;
+    font-size: 20px;
+  }
+  .button-round:hover{
+
+    padding:7px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 407px){
+  .forgot-password {
+    display:block !important;
+    clear: both;
+    text-align: left;
+  }
+}
