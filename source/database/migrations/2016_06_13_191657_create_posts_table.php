@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration
             //
             $table->increments('pId');
             $table->integer('tId')->unsigned()->nullable(false);
-            $table->integer('id')->unsigned()->nullable(false);
+            $table->integer('id')->unsigned()->nullable(true);
             $table->longText('content');
             $table->foreign('tId')->references('tId')->on('threads');
             $table->foreign('id')->references('id')->on('users');
