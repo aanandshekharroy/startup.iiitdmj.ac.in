@@ -91,8 +91,8 @@ class ThreadController extends Controller
     {
         //
         $thread=Thread::where('tUrl',$url)->first();
-        $posts=Post::where('tId',$thread->tId)->get();
-        return view('posts')->with('posts',$posts);
+        $posts=Post::where('tId',$thread->tId)->orderBy('created_at','DESC')->get();
+        return view('posts')->with(['posts'=>$posts,'thread'=>$thread]);
     }
 
     /**

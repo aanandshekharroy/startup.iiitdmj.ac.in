@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::auth();
-
+Route::resource('post','PostController');
 Route::get('/home', 'HomeController@index');
 Route::get('/facility', 'ExtrasController@facility');
 Route::get('/contact', 'ExtrasController@contact_us');
