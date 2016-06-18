@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Proxima-nova-condensed-thin';
+  src: url('../fonts/Mark Simonson - Proxima Nova Alt Condensed Thin.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Mark Simonson - Proxima Nova Alt Condensed Thin.otf') format('opentype');
+  src: url('../fonts/Mark Simonson - Proxima Nova Alt Condensed Thin.woff2') format('woff2'); /* Super Modern Browsers */
+  src: url('../fonts/Mark Simonson - Proxima Nova Alt Condensed Thin.woff') format('woff'); /* Pretty Modern Browsers */
+  src: url('../fonts/Mark Simonson - Proxima Nova Alt Condensed Thin.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('../fonts/Mark Simonson - Proxima Nova Alt Condensed Thin.svg') format('svg'); /* Legacy iOS */
+}
+html,body{
+  font-family: 'Proxima-nova-condensed-thin';
+}
+.button{
+    background-color: #ff4d4d; /* dark peach */
+    border: none;
+    color: #ffffff; /* white */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button:hover { 
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 13px 30px;
+    color: #ff4d4d; 
+    border: 2px solid #ff4d4d; /* dark peach */
+    overflow: hidden;
+    outline:none;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a:hover {
+  text-decoration: none;
+}
+.row{
+	margin: 0px 0px 0px 0px;
+}
+.navbar-color {
+  background:white !important; 
+  min-height: 60px !important;
+  border-bottom:1px solid #f3e5d8 !important;
+  margin-bottom: 0px;
+}
+.img-circle{
+  height:50px;
+  width:50px;
+}
+hr{ 
+	width: 250px; 
+	height: 1px; 
+	background-color:#ff4d4d;
+	border: 0 none;
+	margin: 1em auto; 
+}
+/*
+Don't know what does removing the below code break but it certainly breaks something sope beware
+
+
+input[type="text"],input[type="password"] {
+  background-color:transparent;
+  color:black;
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus,input[type="password"]:focus {
+  outline: none;
+}
+
+*/
+
+footer{
+  background-color: #262626;
+}
+html {
+  margin:0;
+  padding:0;
+}
+body{
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  padding:0px;
+}
+p{
+  margin:0;
+  padding:0;
+}
+
+.container{
+  margin-left:0px;
+  margin-top:10px;
+  margin-right:0px;
+  margin-bottom:0px;}
+.col{
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+/*
+.searchBar .query{
+  background-color: red;
+  display:block;
+  margin: auto;
+  width: 100%;
+  height: 100;
+  font-family: sans-serif;
+  font-size: 20px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  border-bottom: 2px solid #ff4d4d;
+  padding: 5px;
+}
+*/
+.text-centered{
+  text-align:center;
+}
+/*later to be remved when iit to be made toggleable*/
+/* Toggle Styles */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled {
+    padding-left: 250px;
+}
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    top:80px;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #1a1a1a;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+/* Sidebar Styles */
+.sidebar-nav {
+
+    display:block;
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    list-style: none;
+}
+.sidebar-nav li {
+    text-indent: 20px;
+    font-size: 16px;
+    line-height: 50px;
+}
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+.sidebar-nav li a:hover{
+    text-decoration: none;
+    color: #fff;
+    background: #262626;
+}
+.sidebar-nav li a:focus {
+    background-color: #404040;
+    color:white;
+}
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 60px;
+}
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+.sidebar-nav .active{
+    background-color: red;
+}
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+    #wrapper.toggled {
+        padding-left: 250px;
+    }
+    #sidebar-wrapper {
+        width: 250px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+header{
+  margin-bottom: 0px !important; 
+}
