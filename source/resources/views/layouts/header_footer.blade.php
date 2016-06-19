@@ -33,9 +33,13 @@
 @if(Auth::check())
   @if(Auth::user()->isAdmin)
 
-    <div class="row">
-      <div class="col-sm-offset-10">
-        <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a> <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
+    <div class="row alert-box">
+      <div class="col-sm-4">
+          <h4>Welcome Moderator!</h4>
+      </div>
+      <div class="col-sm-4 pull-right" style="text-align:right">
+        <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a>
+        <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
       </div>
     </div>
 
