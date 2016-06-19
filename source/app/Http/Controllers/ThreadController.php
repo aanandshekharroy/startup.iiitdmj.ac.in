@@ -35,7 +35,7 @@ class ThreadController extends Controller
     public function allow(Request $request){
         $tId=$request->input('tId');
         if($request->input('action')=="delete"){
-            Thread::where('tId',$tId)->delete();
+            // Thread::where('tId',$tId)->delete();
             if(Thread::where('tId',$tId)->delete()){
                 return 1;
             }

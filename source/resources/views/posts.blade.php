@@ -16,11 +16,6 @@
         @foreach ($posts as $post)
             <hr>
             <div class="row ">
-                <!-- <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 pull-left" style="text-align: left;padding-top: 5px;">
-                    
-                      
-                </div> -->
-                
                 <div class="col-sm-offset-1 col-sm-10">
                     <font style="color:#001f59;font-size: 18px;">{{$post->email}}</font><font style="color:grey;font-size: 12px;padding-left: 10px;">{{$post->created_at->diffForHumans()}}</font>
                     <h5 class="post-content">

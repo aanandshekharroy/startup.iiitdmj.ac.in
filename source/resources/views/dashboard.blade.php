@@ -81,15 +81,17 @@
 			$.get("/threads/allow",obj,function(data,status){
 				if(data==1){
 					button.text('Posted');
+					button.next().attr('disabled','disabled');
 				}
-				// console.log("data: "+data+",-- "+$(this).text());
+				console.log("data: "+data+",-- "+$(this).text());
 			})
 		    .success(function(){
 		      console.log("op");
 		      
-		      button.removeAttr('disabled');
+		      
 		    })
 		    .error(function(){
+		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
 		    });
 		    
@@ -105,15 +107,17 @@
 			$.get("/threads/allow",obj,function(data,status){
 				if(data==1){
 					button.text('Deleted');
+					button.prev().attr('disabled','disabled');
 				}
-				console.log("data returned: "+data+", tid: "+tId);
+				console.log("data delete returned: "+data+", tid: "+tId);
 			})
 		    .success(function(){
 		      console.log("op");
 		      
-		      button.removeAttr('disabled');
+		      
 		    })
 		    .error(function(){
+		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
 		    });
 		    
@@ -131,6 +135,8 @@
 			$.get("/posts/allow",obj,function(data,status){
 				if(data==1){
 					button.text('Posted');
+					button.next().attr('disabled','disabled');
+					button.removeAttr('disabled');
 				}
 				// console.log("data: "+data+",-- "+$(this).text());
 			})
@@ -140,6 +146,7 @@
 		      button.removeAttr('disabled');
 		    })
 		    .error(function(){
+		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
 		    });
 		    
@@ -155,15 +162,18 @@
 			$.get("/posts/allow",obj,function(data,status){
 				if(data==1){
 					button.text('Deleted');
+					button.prev().attr('disabled','disabled');
+					// button.removeAttr('disabled');
 				}
 				console.log("data returned: "+data+", pid: "+pId);
 			})
 		    .success(function(){
 		      console.log("op");
 		      
-		      button.removeAttr('disabled');
+		      
 		    })
 		    .error(function(){
+		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
 		    });
 		    
