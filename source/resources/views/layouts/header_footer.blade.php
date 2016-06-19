@@ -34,16 +34,31 @@
     @if(Auth::check())
         @if(Auth::user()->isAdmin)
 
-        <div class="row alert-box">
-            <div class="col-sm-4">
-                <h4>Welcome Moderator!</h4>
-            </div>
-            <div class="col-sm-4 pull-right" style="text-align:right">
+    <div class="row alert-box">
+      <div class="col-sm-4">
+          <h4>Welcome Moderator!</h4>
+      </div>
+      <div class="col-sm-4 pull-right" style="text-align:right">
                 <fa class="fa fa-bell" style="padding-right:10px;"></fa>
                 <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a>
                 <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
             </div>
-        </div>
+    </div>
+
+    <div class="row alert-box">
+      <div class="col-sm-8">
+          @if(isset($noOfThreads))
+            <h4>Threads::{{count($noOfThreads)}}</h4>
+          @endif
+          @if(isset($noOfPosts))
+            <h4>Posts::{{count($noOfPosts)}}</h4>
+          @endif
+      </div>
+      <div class="col-sm-4 pull-right" style="text-align:right">
+        <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a>
+        <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
+      </div>
+    </div>
 
         @endif
     @endif

@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class ExtrasController extends Controller
+class ExtrasController extends BaseController
 {
     //
+    public function __construct(){
+        parent::__construct();
+    }
     public function facility(){
     	return view('facility');
     }

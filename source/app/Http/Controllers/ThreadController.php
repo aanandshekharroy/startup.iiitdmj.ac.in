@@ -10,13 +10,16 @@ use App\Post;
 use App\User;
 use Auth;
 use Redirect;
-class ThreadController extends Controller
+class ThreadController extends BaseController
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        parent::__construct();
+    }
     public function index()
     {
         //
@@ -85,7 +88,7 @@ class ThreadController extends Controller
             $thread->email=$request->input('email');    
         }
         $thread->save();
-        return Redirect::back()->withErrors(['Your post is waiting moderator approval', 'flag']);
+        return Redirect::back()->withErrors(["Your post is awaiting moderators approval", 'flag']);
 
         // ThreadController::index_with_flag($flag);
         // return view('threads')->with('flag',$flag);
