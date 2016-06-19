@@ -40,17 +40,7 @@ class SearchBarController extends Controller
         }
         return json_encode($groups);
     }
-    public function thread(Request $request,$id){
-        $query=$request->input('query');
-        $search= Thread::where('title','like',"%".$query."%")->get();
-        $threads=array();
-       foreach($search as $thread){
-           //$category=Category::where('catId',$group->catId)->first();
-            $threads[]=  $thread->title;
-        }
-        return json_encode($threads);
-    }
-
+    
     // *
     //  * Show the form for creating a new resource.
     //  *

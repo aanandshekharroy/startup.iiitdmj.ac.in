@@ -19,9 +19,8 @@ class CreateThreadsTabl extends Migration
             // $table->integer('gId')->unsigned()->nullable(false);
             $table->string('tUrl')->nullable(false)->unique();
             $table->longText('content');
-            $table->integer('id')->unsigned()->nullable(true);
-            $table->foreign('id')->references('id')->on('users');
-            // $table->foreign('gId')->references('gId')->on('groups');
+            $table->string('email');
+            $table->enum('moderated', array(0,1))->default(0);
             $table->timestamps();
         });
     }

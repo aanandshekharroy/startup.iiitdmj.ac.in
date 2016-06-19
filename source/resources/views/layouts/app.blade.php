@@ -8,9 +8,9 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href=."css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
-
+<script src="/js/jquery-1.12.0.min.js" ></script>
     <!-- Styles -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" >
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
@@ -40,15 +40,13 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Back to website
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
+                
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -75,8 +73,8 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="/js/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+    <script src="/js/bootstrap.min.js" ></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>

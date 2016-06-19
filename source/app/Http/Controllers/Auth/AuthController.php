@@ -39,7 +39,11 @@ class AuthController extends Controller
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
-
+    public function redirectPath()
+    {
+        $redirectTo = '/dashboard';
+        return $redirectTo;
+    }
     /**
      * Get a validator for an incoming registration request.
      *

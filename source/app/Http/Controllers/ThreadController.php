@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Thread;
 use App\Post;
 use App\User;
+use Auth;
+use Redirect;
 class ThreadController extends Controller
 {
     /**
@@ -18,11 +20,32 @@ class ThreadController extends Controller
     public function index()
     {
         //
-        $threads=Thread::orderBy('created_at','DESC')->get();
+        $threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->get();
         return view('threads')->with('threads',$threads);
+    }
+    public function index_with_flag($flag)
+    {
+        //
+        $threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->get();
+        return view('threads')->with(['threads'=>$threads,'flag'=>$flag]);
     }
     public function getThreadUrl(Request $request){
         return json_encode(Thread::where('title',$request->input('title'))->pluck('tUrl'));
+    }
+    public function allow(Request $request){
+        $tId=$request->input('tId');
+        if($request->input('action')=="delete"){
+            Thread::where('tId',$tId)->delete();
+            if(Thread::where('tId',$tId)->delete()){
+                return 1;
+            }
+            return 0;   
+        }else if($request->input('action')=="allow"){
+            if(Thread::where('tId',$tId)->update(['moderated'=>1])){
+                return 1;
+            }
+            return 0;   
+        }
     }
     /**
      * Show the form for creating a new resource.
@@ -43,42 +66,36 @@ class ThreadController extends Controller
     public function store(Request $request)
     {
         //
-        $user=new User;
-        $id=new \StdClass;
-        if($request->has('name')&&$request->has('email')){
-            $user->name=$request->input('name');
-            $user->email=$request->input('email');
-            $user->save();
-
-        }
-        $validator = Validator::make($request->all(), [
-        'title' => trim($request->input('title')),
-        'title' => 'required|unique:threads|max:255'
-        ]);
-        if ($validator->fails()) {
-            return redirect()->back()
-                        ->withErrors($validator,'createThreadErrors')
-                        ->withInput();
-        }
+        
+        
         $thread=new Thread;
         $thread->title=trim($request->input('title'));
         $thread->title=htmlspecialchars(preg_replace("/\s+/", " ", $thread->title));
         $thread->content=trim($request->input('content'));
         $thread->content=htmlspecialchars(preg_replace("/\s+/", " ", $thread->content));
         $thread->tUrl=ThreadController::createUrl($thread->title);
-        if(!empty($user->id)){
-            $thread->id=$user->id;
-        }
-        $existingSameThread=Thread::where('tUrl',$thread->tUrl)->get()->first();
+        $existingSameThread=Thread::where(['tUrl'=>$thread->tUrl,'moderated'=>1])->get()->first();
         if(!empty($existingSameThread)){
             $url="/threads/".$thread->tUrl;
             //var_dump($url);
             return redirect($url);
         }
+        $flag=0;
+        if(Auth::check()){
+            if(Auth::user()->isAdmin){
+                $thread->moderated=1;
+                $thread->email=Auth::user()->email;
+                $flag=1;        
+            }
+        }else{
+            $thread->email=$request->input('email');    
+        }
         $thread->save();
-            $url="/threads/".$thread->tUrl;
-            //var_dump($url);
-            return redirect($url);
+        return Redirect::back()->withErrors(['Your post is waiting moderator approval', 'flag']);
+
+        // ThreadController::index_with_flag($flag);
+        // return view('threads')->with('flag',$flag);
+        // return redirect('/threads');
     }
 
     /**
@@ -90,9 +107,14 @@ class ThreadController extends Controller
     public function show($url)
     {
         //
-        $thread=Thread::where('tUrl',$url)->first();
-        $posts=Post::where('tId',$thread->tId)->orderBy('created_at','DESC')->get();
-        return view('posts')->with(['posts'=>$posts,'thread'=>$thread]);
+        $thread=Thread::where(['tUrl'=>$url,'moderated'=>1])->first();
+        if(!empty($thread)){
+            $posts=Post::where(['tId'=>$thread->tId,'moderated'=>1])->orderBy('created_at','DESC')->get();
+            return view('posts')->with(['posts'=>$posts,'thread'=>$thread]);    
+        }else{
+            return Redirect::back();
+        }
+        
     }
 
     /**
