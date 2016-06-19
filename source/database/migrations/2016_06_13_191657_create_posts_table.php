@@ -14,12 +14,12 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             //
-            $table->increments('pId');
-            $table->integer('tId')->unsigned()->nullable(false);
+            $table->increments('id');
+            $table->integer('thread_id')->unsigned()->nullable(false);
             $table->longText('content');
             $table->string('email');
             $table->enum('moderated', array(0,1))->default(0);
-            $table->foreign('tId')->references('tId')
+            $table->foreign('thread_id')->references('id')
             ->on('threads')
             ->onDelete('cascade');;
             $table->timestamps();

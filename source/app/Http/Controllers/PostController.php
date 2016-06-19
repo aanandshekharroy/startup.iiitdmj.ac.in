@@ -37,12 +37,12 @@ class PostController extends Controller
         $pId=$request->input('pId');
         if($request->input('action')=="delete"){
             // Thread::where('tId',$tId)->delete();
-            if(Post::where('pId',$pId)->delete()){
+            if(Post::where('id',$pId)->delete()){
                 return 1;
             }
             return 0;   
         }else if($request->input('action')=="allow"){
-            if(Post::where('pId',$pId)->update(['moderated'=>1])){
+            if(Post::where('id',$pId)->update(['moderated'=>1])){
                 return 1;
             }
             return 0;   
@@ -59,7 +59,7 @@ class PostController extends Controller
         //
         $post=new Post;
         $post->content=($request->input('content'));
-        $post->tId=$request->input('tId');
+        $post->thread_id=$request->input('tId');
         $post->email=$request->input('email');
         if(Auth::check()){
             if(Auth::user()->isAdmin){

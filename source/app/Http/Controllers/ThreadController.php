@@ -23,12 +23,6 @@ class ThreadController extends Controller
         $threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->get();
         return view('threads')->with('threads',$threads);
     }
-    public function index_with_flag($flag)
-    {
-        //
-        $threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->get();
-        return view('threads')->with(['threads'=>$threads,'flag'=>$flag]);
-    }
     public function getThreadUrl(Request $request){
         return json_encode(Thread::where('title',$request->input('title'))->pluck('tUrl'));
     }
@@ -36,12 +30,12 @@ class ThreadController extends Controller
         $tId=$request->input('tId');
         if($request->input('action')=="delete"){
             // Thread::where('tId',$tId)->delete();
-            if(Thread::where('tId',$tId)->delete()){
+            if(Thread::where('id',$tId)->delete()){
                 return 1;
             }
             return 0;   
         }else if($request->input('action')=="allow"){
-            if(Thread::where('tId',$tId)->update(['moderated'=>1])){
+            if(Thread::where('id',$tId)->update(['moderated'=>1])){
                 return 1;
             }
             return 0;   
@@ -109,7 +103,8 @@ class ThreadController extends Controller
         //
         $thread=Thread::where(['tUrl'=>$url,'moderated'=>1])->first();
         if(!empty($thread)){
-            $posts=Post::where(['tId'=>$thread->tId,'moderated'=>1])->orderBy('created_at','DESC')->get();
+            //$posts=Post::where(['thread_id'=>$thread->tId,'moderated'=>1])->orderBy('created_at','DESC')->get();
+            $posts = $thread->posts()->where(['moderated'=> 1])->orderBy('created_at','DESC')->get();
             return view('posts')->with(['posts'=>$posts,'thread'=>$thread]);    
         }else{
             return Redirect::back();

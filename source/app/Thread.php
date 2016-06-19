@@ -8,6 +8,6 @@ class Thread extends Model
 {
     //
     public function posts(){
-    	return $this->hasMany('App\Post','pId','tId');
+    	return $this->hasMany('App\Post');
     }
 }
