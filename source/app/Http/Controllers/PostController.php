@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Post;
 use Auth;
 use Redirect;
-class PostController extends Controller
+class PostController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +16,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function __construct(){
+        parent::__construct();
         $this->middleware('isAdmin', ['only' => ['allow']]);
         // $this->middleware('auth'
     }

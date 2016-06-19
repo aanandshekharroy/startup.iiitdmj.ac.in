@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Thread;
 use App\Post;
-class DashboardController extends Controller
+class DashboardController extends BaseController
 {
     //
     public function __construct(){
+    	parent::__construct();
     	$this->middleware('isAdmin');
     }
     public function index(){

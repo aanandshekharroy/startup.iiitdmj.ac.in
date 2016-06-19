@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@welcome');
 
 Route::auth();
 Route::get('posts/allow','PostController@allow');
@@ -26,5 +24,4 @@ Route::get('threads/allow','ThreadController@allow');
 Route::resource('forum','ThreadController');
 
 Route::get('/get-thread-url','ThreadController@getThreadUrl');
-Route::get('/searchBarThread/{category}','SearchBarController@thread');
 Route::get('/dashboard','DashboardController@index');

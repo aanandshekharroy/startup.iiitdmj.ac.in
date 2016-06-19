@@ -36,6 +36,12 @@
     <div class="row alert-box">
       <div class="col-sm-4">
           <h4>Welcome Moderator!</h4>
+          @if(isset($noOfThreads))
+            <h3>Threads::{{count($noOfThreads)}}</h3>
+          @endif
+          @if(isset($noOfPosts))
+            <h3>Posts::{{count($noOfPosts)}}</h3>
+          @endif
       </div>
       <div class="col-sm-4 pull-right" style="text-align:right">
         <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a>
