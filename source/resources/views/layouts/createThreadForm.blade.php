@@ -16,7 +16,7 @@
                                     <fieldset class="form-group">
                                         
                                         <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                        <input type="email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                                     </fieldset>
                                 @endif
 
@@ -24,7 +24,7 @@
                               <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                               <fieldset class="form-group">
                                 <label for="exampleTextarea">Title</label>
-                                <input class="form-control" name="title" id="exampleTextarea" rows="3"/>
+                                <input required class="form-control" name="title" id="exampleTextarea" rows="3"/>
                               </fieldset>
                               <fieldset class="form-group">
                                 <label for="exampleTextarea">Description</label>

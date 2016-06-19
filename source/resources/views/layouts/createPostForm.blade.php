@@ -20,13 +20,13 @@
                                 @if(Auth::guest()||!Auth::user()->isAdmin)
                                     <fieldset class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" required placeholder="Enter email">
                                     </fieldset>    
                                 @endif
                                 
                               <fieldset class="form-group">
                                 <label for="exampleTextarea">Content</label>
-                                <textarea class="form-control" name="content" id="exampleTextarea" rows="3"></textarea>
+                                <textarea required class="form-control" name="content" id="exampleTextarea" rows="3"></textarea>
                               </fieldset>
                               <button type="submit" class="btn new-thread-button">Submit</button>
                                 <!-- <input type="hidden" name="_token" value="{{{ csrf_token() }}}" /> -->

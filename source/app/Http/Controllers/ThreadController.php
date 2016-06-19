@@ -85,7 +85,7 @@ class ThreadController extends Controller
             $thread->email=$request->input('email');    
         }
         $thread->save();
-        return Redirect::back()->withErrors(['Your post is waiting moderator approval', 'flag']);
+        return Redirect::back()->withErrors(["Your post is awaiting moderators approval", 'flag']);
 
         // ThreadController::index_with_flag($flag);
         // return view('threads')->with('flag',$flag);
