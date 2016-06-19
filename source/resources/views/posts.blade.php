@@ -3,6 +3,16 @@
 @section('content')
     @if(!empty($posts))
     <div class="container">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+            <div class="col-sm-offset-1 col-sm-10">
+                <h3>{{$thread->title}}</h3>
+            </div>
+            <div class="col-sm-offset-1 col-sm-10">
+                <h4>{{$thread->content}}</h4>
+            </div>
+        </div>
+    </div>
         @foreach ($posts as $post)
             <hr>
             <div class="row ">
@@ -10,9 +20,12 @@
                     
                       
                 </div> -->
+                
                 <div class="col-sm-offset-1 col-sm-10">
-                    <font style="color:#ff4d4d;font-size: 18px;">{{$post->user}}</font><font style="color:grey;font-size: 12px;padding-left: 10px;">{{$post->created_at->diffForHumans()}}</font>
-                    <h5 class="post-content">{{$post->content}}</h5>
+                    <font style="color:#001f59;font-size: 18px;">{{$post->email}}</font><font style="color:grey;font-size: 12px;padding-left: 10px;">{{$post->created_at->diffForHumans()}}</font>
+                    <h5 class="post-content">
+                    {{$post->content}}
+                    </h5>
                 </div>
             </div>        
            <!-- <hr> -->
@@ -21,33 +34,16 @@
         </div>
     @endif
  
-<!--  -->
-@endsection
+    <div class="col-sm-2 hidden-xs text-center pull-right">
+        <button id="new-thread-button" class="btn" data-toggle="modal" data-target="#myModalThread">Post</button>
 
-@section('submitPost')
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-offset-1 col-sm-10">
-                <form id="postDiscussion" class="" method="post" action="{{url('/post')}}"/>
-                    <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-                    <textarea rows="4" class="form-control" cols="80" name="content" required  ></textarea>
-                    <!-- <div class="row"> -->
-                        <div class="col-sm-3">
-                            <input  type="checkbox" name="anonymous" value="">
-                            <label  class="unselectable anonymous">Anonymous</label>
-                            <button type="submit" name="post" class="btn btn-primary" >
-                            Post
-                            </button>
-
-                        </div>
-                        
-                            
-                            
-                    </div>            
-                    <input type='hidden' name='tId' value={{$thread->tId}}>
-                </form>      
-            </div>
-        </div>
-        
     </div>
+    @include('layouts.createPostForm')
+@if(Auth::guest()||!Auth::user()->isAdmin)
+    @if($errors->any())
+        <script type="text/javascript">
+            alert('{{$errors->first()}}')
+        </script>
+    @endif
+@endif
 @endsection

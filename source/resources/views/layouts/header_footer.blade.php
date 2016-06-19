@@ -26,10 +26,21 @@
   <script type="text/javascript" src="/js/mhslideshow.js"></script>
   <script type="text/javascript" src="/js/initblinds.js"></script>
   <link rel="stylesheet" href="/js/mhslideshow.css" type="text/css" />
-
+<link href="/css/mystyle.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
+@if(Auth::check())
+  @if(Auth::user()->isAdmin)
+
+    <div class="row">
+      <div class="col-sm-offset-11">
+        <a href="/logout" class="btn btn-info" role="button">Logout</a> 
+      </div>
+    </div>
+
+  @endif
+@endif
   <div class="main">
     <div class="header">
       <div class="header_resize" align="center">

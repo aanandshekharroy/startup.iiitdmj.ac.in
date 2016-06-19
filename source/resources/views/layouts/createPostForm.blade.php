@@ -10,22 +10,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <form class="form search-thread" method="post" action="{{url('/threads')}}"/>
+                        <form class="form search-thread" method="post" action="{{url('/post')}}"/>
                             <div class="modal-body">
+                                <fieldset class="form-group">
+                                <input type="hidden" name="tId" value="{{$thread->tId}}"/>
+                                    <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                                    <!-- <small class="text-muted">We'll never share your email with anyone else.</small> -->
+                                </fieldset>
                                 @if(Auth::guest()||!Auth::user()->isAdmin)
-                                    <fieldset class="form-group">
-                                        
+                                    
+                                        <fieldset class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
                                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </fieldset>
+                                        </fieldset>    
+                                    
+                                    
                                 @endif
-
                                 
-                              <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-                              <fieldset class="form-group">
-                                <label for="exampleTextarea">Title</label>
-                                <input class="form-control" name="title" id="exampleTextarea" rows="3"/>
-                              </fieldset>
                               <fieldset class="form-group">
                                 <label for="exampleTextarea">Description</label>
                                 <textarea class="form-control" name="content" id="exampleTextarea" rows="3"></textarea>

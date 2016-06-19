@@ -16,10 +16,12 @@ class CreatePostsTable extends Migration
             //
             $table->increments('pId');
             $table->integer('tId')->unsigned()->nullable(false);
-            $table->integer('id')->unsigned()->nullable(true);
             $table->longText('content');
-            $table->foreign('tId')->references('tId')->on('threads');
-            $table->foreign('id')->references('id')->on('users');
+            $table->string('email');
+            $table->enum('moderated', array(0,1))->default(0);
+            $table->foreign('tId')->references('tId')
+            ->on('threads')
+            ->onDelete('cascade');;
             $table->timestamps();
         });
     }

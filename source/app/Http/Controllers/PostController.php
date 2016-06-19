@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Post;
+use Auth;
+use Redirect;
 class PostController extends Controller
 {
     /**
@@ -13,6 +15,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        $this->middleware('isAdmin', ['only' => ['allow']]);
+        // $this->middleware('auth'
+    }
     public function index()
     {
         //
@@ -27,7 +33,21 @@ class PostController extends Controller
     {
         //
     }
-
+    public function allow(Request $request){
+        $pId=$request->input('pId');
+        if($request->input('action')=="delete"){
+            // Thread::where('tId',$tId)->delete();
+            if(Post::where('pId',$pId)->delete()){
+                return 1;
+            }
+            return 0;   
+        }else if($request->input('action')=="allow"){
+            if(Post::where('pId',$pId)->update(['moderated'=>1])){
+                return 1;
+            }
+            return 0;   
+        }
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -40,8 +60,20 @@ class PostController extends Controller
         $post=new Post;
         $post->content=($request->input('content'));
         $post->tId=$request->input('tId');
+        $post->email=$request->input('email');
+        if(Auth::check()){
+            if(Auth::user()->isAdmin){
+                $post->moderated=1;
+                $post->email=Auth::user()->email;
+                
+            }
+        }else{
+            $post->email=$request->input('email');    
+        }
         $post->save();
-        return redirect()->back();
+        return Redirect::back()->withErrors(['Your post is waiting moderator approval', 'flag']);
+       
+       
     }
 
     /**
