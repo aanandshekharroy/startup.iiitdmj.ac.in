@@ -1,3 +1,25 @@
 h5{
   color: black !important;
 }
+.primary-text{
+	color:#020080;
+}
+.discussions{
+	border:1px solid grey;
+}
+hr.noPad{
+	margin: 0px !important;
+}
+.post{
+	padding: 20px;
+	padding-bottom: 20px;
+	background: #e6e6e6;
+}
+.whole_discussion{
+	margin: 20px !important;
+	padding: 40px;
+}
+.box{
+	border:1px solid grey;
+	padding: 20px;
+}

@@ -1,5 +1,9 @@
 @extends('layouts.header_footer')
 
+@section('slideshow')
+@include('imageSlideshow')
+@endsection
+
 @section('content')
  <div class="content">
 

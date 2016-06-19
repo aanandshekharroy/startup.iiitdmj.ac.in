@@ -18,9 +18,9 @@
     <script src="/js/typeahead.min.js"></script>
   <link href="/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="/images/favicon.ico" />
-  <script type="text/javascript" src="/js/cufon-yui.js"></script>
-  <script type="text/javascript" src="/js/arial.js"></script>
-  <script type="text/javascript" src="/js/cuf_run.js"></script>
+  <!-- <script type="text/javascript" src="/js/cufon-yui.js"></script> -->
+  <!-- <script type="text/javascript" src="/js/arial.js"></script>-->
+  <!-- <script type="text/javascript" src="/js/cuf_run.js"></script>-->
   <script type="text/javascript">window.onerror = function(){return true;};</script>
   <!-- Copy to the head section of your webpage -->
   <script type="text/javascript" src="/js/mhslideshow.js"></script>
@@ -64,21 +64,9 @@
         <div class="clr"></div>
       </div>
     </div>
-    <div class="hbg">
-      <div class="hbg_resize">
-        <!-- Copy to where you want to display the Slideshow -->
-        <div id="mhblindsshow">
-          <style type="text/css"> #mhblindsshow img { display:none; } </style>
-          <img src="/images/banner1.jpg" title="banner1" />
-          <img src="/images/reva.jpg" title="reva" />
-          <img src="/images/pg hostel.jpg" title="pg hostel" />
-          <img src="/images/IMG_8568.JPG" title="IMG_8568" />
-          <img src="/images/IMG_8579.JPG" title="IMG_8579" />
-          <img src="/images/IMG_8605.JPG" title="IMG_8605" />
-        </div>
-      <!-- End of Slideshow codes -->
-      </div>
-    </div>
+
+    @yield('slideshow')
+
     <div class="container">
       @yield('content')    
       @yield('submitPost') 
