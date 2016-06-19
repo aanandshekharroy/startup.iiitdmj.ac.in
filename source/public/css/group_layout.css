@@ -155,27 +155,16 @@ input.tt-hint{
 .btn{
   border-radius: 0px !important;
   border:1px solid #020080 !important;
-  color: #fff !important;
+  color: white !important;
   background-color: #020080 !important;
 }
 .btn:hover{
   border-radius: 0px !important;
   border:1px solid #020080 !important;
   color: #020080 !important;
-  background-color: white !important;
+  background-color: transparent !important;
 }
-.button-inverse{
-  border-radius: 0px !important;
-  border:1px solid #020080 !important;
-  color: #fff !important;
-  background-color: #020080 !important;
-}
-.button-inverse:hover{
-  border-radius: 0px !important;
-  border:1px solid #020080 !important;
-  color: #020080 !important;
-  background-color: white !important;
-}
+
 .input-group-addon {
     background-color: transparent !important;
     border: 0px !important;
