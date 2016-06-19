@@ -71,7 +71,7 @@ class PostController extends Controller
             $post->email=$request->input('email');    
         }
         $post->save();
-        return Redirect::back()->withErrors(['Your post is waiting moderator approval', 'flag']);
+        return Redirect::back()->withErrors(["Your post is awaiting moderators approval", 'flag']);
        
        
     }

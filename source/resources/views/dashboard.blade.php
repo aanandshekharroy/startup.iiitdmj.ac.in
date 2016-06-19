@@ -12,7 +12,7 @@
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-      <h3>Threads</h3>
+      <h3>Threads</h3><hr>
       	@if(count($threads)>0)
       		@foreach( $threads as $thread)
       			<div class="row">
@@ -39,7 +39,7 @@
       		<h4>No thread to moderate!</h4>
       		<hr>
       	@endif
-      	<h3>Posts</h3>
+      	<h3>Posts</h3><hr>
       	@if(count($posts)>0)
       		@foreach( $posts as $post)
       			<div class="row">
