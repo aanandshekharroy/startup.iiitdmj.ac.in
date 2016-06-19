@@ -34,8 +34,8 @@
   @if(Auth::user()->isAdmin)
 
     <div class="row">
-      <div class="col-sm-offset-11">
-        <a href="/logout" class="btn btn-info" role="button">Logout</a> 
+      <div class="col-sm-offset-10">
+        <a href="/dashboard" class="btn btn-info" role="button">Dashboard</a> <a href="/logout" class="btn btn-info" role="button">Logout</a> 
       </div>
     </div>
 

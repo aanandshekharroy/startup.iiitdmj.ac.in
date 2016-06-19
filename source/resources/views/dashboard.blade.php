@@ -12,6 +12,7 @@
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
+      <h3>Threads</h3>
       	@if(count($threads)>0)
       		@foreach( $threads as $thread)
       			<div class="row">
@@ -38,6 +39,7 @@
       		<h4>No thread to moderate!</h4>
       		<hr>
       	@endif
+      	<h3>Posts</h3>
       	@if(count($posts)>0)
       		@foreach( $posts as $post)
       			<div class="row">
@@ -85,11 +87,6 @@
 				}
 				console.log("data: "+data+",-- "+$(this).text());
 			})
-		    .success(function(){
-		      console.log("op");
-		      
-		      
-		    })
 		    .error(function(){
 		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
@@ -111,11 +108,6 @@
 				}
 				console.log("data delete returned: "+data+", tid: "+tId);
 			})
-		    .success(function(){
-		      console.log("op");
-		      
-		      
-		    })
 		    .error(function(){
 		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
@@ -136,15 +128,8 @@
 				if(data==1){
 					button.text('Posted');
 					button.next().attr('disabled','disabled');
-					button.removeAttr('disabled');
 				}
-				// console.log("data: "+data+",-- "+$(this).text());
 			})
-		    .success(function(){
-		      console.log("op");
-		      
-		      button.removeAttr('disabled');
-		    })
 		    .error(function(){
 		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
@@ -163,15 +148,9 @@
 				if(data==1){
 					button.text('Deleted');
 					button.prev().attr('disabled','disabled');
-					// button.removeAttr('disabled');
 				}
 				console.log("data returned: "+data+", pid: "+pId);
 			})
-		    .success(function(){
-		      console.log("op");
-		      
-		      
-		    })
 		    .error(function(){
 		    	button.removeAttr('disabled');
 		      alert('Cant connect to internet!!');
