@@ -13,7 +13,7 @@
                         <form class="form search-thread" method="post" action="{{url('/post')}}"/>
                             <div class="modal-body">
                                 <fieldset class="form-group">
-                                <input type="hidden" name="tId" value="{{$thread->tId}}"/>
+                                <input type="hidden" name="tId" value="{{$thread->id}}"/>
                                     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                                     <!-- <small class="text-muted">We'll never share your email with anyone else.</small> -->
                                 </fieldset>

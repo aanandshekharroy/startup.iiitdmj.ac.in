@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <form class="form search-thread" method="post" action="{{url('/threads')}}"/>
+                        <form class="form search-thread" method="post" action="{{url('/forum')}}"/>
                             <div class="modal-body">
                                 @if(Auth::guest()||!Auth::user()->isAdmin)
                                     <fieldset class="form-group">

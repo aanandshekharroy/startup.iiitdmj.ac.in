@@ -23,7 +23,7 @@ Route::get('/facility', 'ExtrasController@facility');
 Route::get('/contact', 'ExtrasController@contact_us');
 Route::get('/tax-benefits', 'ExtrasController@tax_benefits');
 Route::get('threads/allow','ThreadController@allow');
-Route::resource('threads','ThreadController');
+Route::resource('forum','ThreadController');
 
 Route::get('/get-thread-url','ThreadController@getThreadUrl');
 Route::get('/searchBarThread/{category}','SearchBarController@thread');

@@ -52,7 +52,7 @@
 						<h5>Posted by : {{$post->email}}</h5>
 					</div>
 					<div class="col-sm-offset-10 col-sm-3">
-						<input type="hidden" pId="{{$post->pId}}"/>
+						<input type="hidden" pId="{{$post->id}}"/>
 						<button class="btn btn-primary post-post">Post</button>
 						<button class="btn btn-danger delete-post">Delete</button>
 					</div>

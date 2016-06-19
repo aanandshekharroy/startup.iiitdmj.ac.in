@@ -22,14 +22,15 @@
                     {{--*/ $des = str_limit($thread->content, 90, '...') /*--}}
                     {{--*/ $title = str_limit($thread->title, 50, '...') /*--}}
                     <div class="row thread-row" style="border-top: 1px solid grey"
-                    onclick="window.location.href='/threads/{{$thread->tUrl}}'">
+                    onclick="window.location.href='/forum/{{$thread->tUrl}}'">
                         <h3>{{$title}}</h3><h5>{{$des}}</h5>
                         <div class="row">
                             <div class="col-sm-6 pull-left thread-started-by" style="margin-left: -14px;">
                                 <h6>Started by: {{$thread->email}}</h6>
                             </div>
                             <div class="col-sm-6 thread-row-discussions">
-                                <h6>No. of Posts: {{count($thread->posts)}}</h6>
+                                <h6>No. of Posts: {{ count($thread->posts) }}
+                                </h6>
                             </div>  
                         </div>                
                     </div>

@@ -14,7 +14,7 @@ class CreateThreadsTabl extends Migration
     {
         Schema::create('threads', function (Blueprint $table) {
             //
-            $table->increments('tId');
+            $table->increments('id');
             $table->string('title')->unique()->nullable(false);
             // $table->integer('gId')->unsigned()->nullable(false);
             $table->string('tUrl')->nullable(false)->unique();

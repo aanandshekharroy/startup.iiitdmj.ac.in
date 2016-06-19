@@ -58,7 +58,7 @@
             <li><a href="/tax-benefits">Tax Benefits </a></li>
             <li><a href="#">Information </a></li>
             <li><a href="/contact">Contact Us </a></li>
-            <li><a href="/threads">Forum</a></li>
+            <li><a href="/forum">Forum</a></li>
           </ul>
         </div>
         <div class="clr"></div>
