@@ -1,44 +1,39 @@
 @extends('layouts.header_footer')
 
 @section('content')
-    @if(!empty($posts))
     <div class="container">
-    <div class="row">
-        <div class="col-sm-offset-1 col-sm-10">
-            <div class="col-sm-offset-1 col-sm-10">
-                <h3>{{$thread->title}}</h3>
-            </div>
-            <div class="col-sm-offset-1 col-sm-10">
-                <h4>{{$thread->content}}</h4>
-            </div>
-        </div>
-    </div>
-        @foreach ($posts as $post)
-            <hr>
-            <div class="row ">
-                <div class="col-sm-offset-1 col-sm-10">
-                    <font style="color:#001f59;font-size: 18px;">{{$post->email}}</font><font style="color:grey;font-size: 12px;padding-left: 10px;">{{$post->created_at->diffForHumans()}}</font>
-                    <h5 class="post-content">
-                    {{$post->content}}
-                    </h5>
+        <div class="row whole_discussion">
+            <div class="row box">
+                <div class="row">
+                    <h3 class="primary-text">{{$thread->title}}</h3>
+                    <h5>{{$thread->content}}</h5>
                 </div>
-            </div>        
-           <!-- <hr> -->
-        @endforeach
-        <hr>
+                @if(!empty($posts))
+                    @foreach ($posts as $post)
+                        <hr class="noPad">
+                        <div class="row post">
+                            <h4 class="post-content">
+                                {{$post->content}}
+                            </h4>
+                            <font style="color:#020080;font-size: 16px;">{{$post->email}}</font><font style="color:grey;font-size: 12px;padding-left: 10px;">{{$post->created_at->diffForHumans()}}</font>
+                        </div>        
+                    @endforeach
+                    <hr class="noPad">
+                @endif
+                <div class="row" style="padding-top:20px">
+                    <button id="new-thread-button" class="btn" data-toggle="modal" data-target="#myModalThread">Post</button>
+                </div>
+            </div>
         </div>
-    @endif
- 
-    <div class="col-sm-2 hidden-xs text-center pull-right">
-        <button id="new-thread-button" class="btn" data-toggle="modal" data-target="#myModalThread">Post</button>
-
     </div>
+    <p style="padding:30px;"/>
     @include('layouts.createPostForm')
-@if(Auth::guest()||!Auth::user()->isAdmin)
-    @if($errors->any())
-        <script type="text/javascript">
-            alert('{{$errors->first()}}')
-        </script>
+
+    @if(Auth::guest()||!Auth::user()->isAdmin)
+        @if($errors->any())
+            <script type="text/javascript">
+                alert('{{$errors->first()}}')
+            </script>
+        @endif
     @endif
-@endif
 @endsection

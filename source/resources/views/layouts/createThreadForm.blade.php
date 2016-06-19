@@ -30,7 +30,7 @@
                                 <label for="exampleTextarea">Description</label>
                                 <textarea class="form-control" name="content" id="exampleTextarea" rows="3"></textarea>
                               </fieldset>
-                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <button type="submit" class="btn new-thread-button">Submit</button>
                                 <!-- <input type="hidden" name="_token" value="{{{ csrf_token() }}}" /> -->
                                 <!-- <label for="typeahead"></label> -->
                                 <!-- <input type="text"  class="form-control" placeholder="Thread title" type="text" name="title" required> -->
