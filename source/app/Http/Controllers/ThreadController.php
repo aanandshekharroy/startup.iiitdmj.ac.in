@@ -10,13 +10,16 @@ use App\Post;
 use App\User;
 use Auth;
 use Redirect;
-class ThreadController extends Controller
+class ThreadController extends BaseController
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        parent::__construct();
+    }
     public function index()
     {
         //
