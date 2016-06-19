@@ -35,7 +35,7 @@
 
     <div class="row">
       <div class="col-sm-offset-10">
-        <a href="/dashboard" class="btn btn-info" role="button">Dashboard</a> <a href="/logout" class="btn btn-info" role="button">Logout</a> 
+        <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a> <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
       </div>
     </div>
 

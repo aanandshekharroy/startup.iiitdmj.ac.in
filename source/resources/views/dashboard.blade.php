@@ -27,7 +27,7 @@
 						<h5>Posted by : {{$thread->email}}</h5>
 					</div>
 					<div class="col-sm-offset-10 col-sm-3">
-						<input type="hidden" tId="{{$thread->tId}}"/>
+						<input type="hidden" tId="{{$thread->id}}"/>
 						<button class="btn btn-primary post-thread">Post</button>
 						<button class="btn btn-danger delete-thread">Delete</button>
 					</div>

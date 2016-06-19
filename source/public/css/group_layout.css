@@ -153,16 +153,28 @@ input.tt-hint{
     background-color: white;
 }
 .btn{
-	border-radius: 0px !important;
-	border:1px solid #020080 !important;
-	color: #020080;
-	background-color: transparent !important;
+  border-radius: 0px !important;
+  border:1px solid #020080 !important;
+  color: #fff !important;
+  background-color: #020080 !important;
 }
 .btn:hover{
-	border-radius: 0px !important;
-	border:1px solid #020080 !important;
-	color: #fff !important;
-	background-color: #020080 !important;
+  border-radius: 0px !important;
+  border:1px solid #020080 !important;
+  color: #020080 !important;
+  background-color: white !important;
+}
+.button-inverse{
+  border-radius: 0px !important;
+  border:1px solid #020080 !important;
+  color: #fff !important;
+  background-color: #020080 !important;
+}
+.button-inverse:hover{
+  border-radius: 0px !important;
+  border:1px solid #020080 !important;
+  color: #020080 !important;
+  background-color: white !important;
 }
 .input-group-addon {
     background-color: transparent !important;
@@ -206,14 +218,6 @@ input.tt-hint{
 button:focus{
   text-decoration: none !important;
   outline: none !important;
-}
-.btn.focus, .btn:focus {
-    color: #020080 !important;
-    text-decoration: none;
-}
-.btn:hover {
-    color: white !important;
-    text-decoration: none;
 }
 .a-group-name{
   color:white !important;
