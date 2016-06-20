@@ -38,25 +38,19 @@
       <div class="col-sm-4">
           <h4>Welcome Moderator!</h4>
       </div>
+      
+          <!-- {{count($noOfThreads)}}
+          {{count($noOfPosts)}} -->
       <div class="col-sm-4 pull-right" style="text-align:right">
+          @if(isset($noOfThreads) || isset($noOfPosts))
+              @if( count($noOfThreads) == 0)
                 <fa class="fa fa-bell" style="padding-right:10px;"></fa>
-                <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a>
-                <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
-            </div>
-    </div>
-
-    <div class="row alert-box">
-      <div class="col-sm-8">
-          @if(isset($noOfThreads))
-            <h4>Threads::{{count($noOfThreads)}}</h4>
+              @else
+                <a href="/dashboard"><fa class="fa fa-bell" style="padding-right:10px;color:#ff4d4d"></fa></a>
+              @endif
           @endif
-          @if(isset($noOfPosts))
-            <h4>Posts::{{count($noOfPosts)}}</h4>
-          @endif
-      </div>
-      <div class="col-sm-4 pull-right" style="text-align:right">
-        <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a>
-        <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
+          <a href="/dashboard" class="btn button-inverse" role="button">Dashboard</a>
+          <a href="/logout" class="btn button-inverse" role="button">Logout</a> 
       </div>
     </div>
 
