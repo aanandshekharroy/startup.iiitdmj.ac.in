@@ -188,16 +188,16 @@
 
      </div>
      <div class="gadget panel-gadget">
-        <h3>Have a Question ?</h3>
+        <h3 class="heading-threads">Have a Question ?</h3>
         <div class="text-center">
-            <button id="new-thread-button" class="btn" data-toggle="modal" data-target="#myModalThread">Ask</button>
+            <button id="new-thread-button" class="btn btn-broad" data-toggle="modal" data-target="#myModalThread">Ask</button>
         </div>
-        <hr>
-        <h5>Recent Discussions</h5>
+        <p style="padding-top:5px"></p>
+        <h5 class="heading-threads">Recent Discussions</h5>
         @if(count($threads)>=1) 
             @foreach ($threads as $thread)
-                {{--*/ $des = str_limit($thread->content, 90, '...') /*--}}
-                {{--*/ $title = str_limit($thread->title, 50, '...') /*--}}
+                {{--*/ $des = str_limit($thread->content, 45, '...') /*--}}
+                {{--*/ $title = str_limit($thread->title, 20, '...') /*--}}
                 <div class="row thread-row" style="border-top: 1px solid grey"
                 onclick="window.location.href='/forum/{{$thread->tUrl}}'">
                     <h4>{{$title}}</h4><h6>{{$des}}</h6>                
@@ -206,7 +206,7 @@
         @else
             <h2 class="primary-text">No discussions yet!</h2>
         @endif
-        
+        <a href="/forum">more >></a>
      </div>
 
 
