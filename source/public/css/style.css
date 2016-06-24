@@ -415,3 +415,7 @@ margin:0 auto;
 #list3 { }
 #list3 ul { list-style-image: url("images/arrow.png"); color:#000000; font-size:14px;padding-left:25px; }
 #list3 ul li { line-height:30px; }
+
+.panel-gadget {
+	border: 1px solid grey;
+}
