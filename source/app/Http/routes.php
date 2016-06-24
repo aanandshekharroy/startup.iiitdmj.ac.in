@@ -12,7 +12,6 @@
 */
 
 Route::get('/', 'HomeController@welcome');
-
 Route::auth();
 Route::get('posts/allow','PostController@allow');
 Route::resource('post','PostController');
