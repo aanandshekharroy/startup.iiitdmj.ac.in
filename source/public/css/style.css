@@ -418,4 +418,20 @@ margin:0 auto;
 
 .panel-gadget {
 	border: 1px solid #e0dddd;
+	margin-left: 40px !important;
+	padding-left: 20px !important;
+}
+.heading-threads {
+  color:#ff8b14 !important;
+}
+.btn-broad{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+h3.heading-threads {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+.panel-gadget > a{
+	color: #ff8b14;
 }
