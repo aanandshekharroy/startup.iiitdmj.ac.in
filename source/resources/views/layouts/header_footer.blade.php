@@ -91,8 +91,9 @@
     <div class="fbg_resize">  
       <div class="footer">
         <div class="footer_resize">
-          <p class="lf">&copy; Copyright <a href="http://startup.iiitdmj.ac.in/"> startup.iiitdmj.ac.in</a><br /></p>
-          <p class="rf">Designed by: <a href="mailto:tabish@iiitdmj.ac.in">Tabish</a></p>
+          <p class="lf">&copy; Copyright <a href="http://startup.iiitdmj.ac.in/"> startup.iiitdmj.ac.in</a><br /></p>          
+          <p class="rf">Designed by: <a href="mailto:tabish@iiitdmj.ac.in">Tabish</a></p><br>
+          <p class="rf">Backend by: <a href="https://github.com/theseus007">Aanand</a> &amp; <a href="https://github.com/Rashi007">Rashi</a> </p>
           <div class="clr"></div>
       </div>
   </div>
