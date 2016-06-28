@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Thread;
 use Illuminate\Http\Request;
 
 class HomeController extends BaseController
@@ -18,7 +19,8 @@ class HomeController extends BaseController
         $this->middleware('auth',['only'=>['index']]);
     }
     public function welcome(){
-        return view('welcome');
+        $threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->take(3)->get();
+        return view('welcome')->with('threads',$threads);
     }
     /**
      * Show the application dashboard.
