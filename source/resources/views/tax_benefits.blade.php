@@ -44,7 +44,6 @@ property if it aims to develop and commercialize:
 <li>A new product or service or process, or</li>
 <li>A significantly improved existing product or service or process, that will create or add
 value for customers or workflow.</li>
-
 </ul>
 
 </li>
