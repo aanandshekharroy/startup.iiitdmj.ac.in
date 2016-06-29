@@ -11,10 +11,10 @@
                     </div>
                     <div class="row">
                         <div class="col8 col-sm-8 col-xs-12">
-                            <p><i class="fa fa-user"></i>: {{$thread->username}} &nbsp;&nbsp; <i class="fa fa-envelope"></i>: {{$thread->email}}</p>
+                            <p><i class="fa fa-user"></i>: {{$thread->name}} &nbsp;&nbsp; <i class="fa fa-envelope"></i>: {{$thread->email}}</p>
                         </div>
                         <div class="col-sm-4 col-xs-12 pull-right">
-                           <font style="color:grey;font-size: 12px;">{{$thread->created_at->diffForHumans()}}</font> 
+                           <font style="color:grey;font-size: 12px;"><i class="fa fa-clock-o"></i>: {{$thread->created_at->diffForHumans()}}</font> 
                         </div>
                     </div>
                 </div>
@@ -29,10 +29,10 @@
                             </div>
                             <div class="row">
                                 <div class="col8 col-sm-8 col-xs-12">
-                                    <font style="color:#020080;font-size: 16px;"><i class="fa fa-user"></i>: {{$post->username}} </font><font style="color:grey;font-size: 12px;">&nbsp;&nbsp; <i class="fa fa-envelope"></i>: {{$post->email}}</font>
+                                    <font style="color:#020080;font-size: 16px;"><i class="fa fa-user"></i>: {{$post->name}} </font><font style="color:grey;font-size: 12px;">&nbsp;&nbsp; <i class="fa fa-envelope"></i>: {{$post->email}}</font>
                                 </div>
                                 <div class="col-sm-4 col-xs-12 pull-right">
-                                   <font style="color:grey;font-size: 12px;">{{$post->created_at->diffForHumans()}}</font> 
+                                   <font style="color:grey;font-size: 12px;"><i class="fa fa-clock-o"></i>: {{$post->created_at->diffForHumans()}}</font> 
                                 </div>
                             </div>
                         </div>        

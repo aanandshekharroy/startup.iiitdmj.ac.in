@@ -62,7 +62,7 @@ class PostController extends BaseController
         if(!(Auth::check()&&Auth::user()->isAdmin)){
             $validator = Validator::make($request->all(), [
             'email' => 'required|email|max:255',
-            'username' => 'required|max:255',
+            'name' => 'required|max:255',
             ]);
 
             if ($validator->fails()) {
@@ -76,15 +76,15 @@ class PostController extends BaseController
         $post->content=($request->input('content'));
         $post->thread_id=$request->input('tId');
         $post->email=$request->input('email');
-        $post->username=$request->input('username');
         if(Auth::check()){
             if(Auth::user()->isAdmin){
                 $post->moderated=1;
                 $post->email=Auth::user()->email;
-                
+                $post->name=Auth::user()->name;
             }
         }else{
-            $post->email=$request->input('email');    
+            $post->email=$request->input('email'); 
+            $post->name=$request->input('name');       
         }
         $post->save();
         return Redirect::back()->withErrors(["Your post is awaiting moderators approval", 'flag']);
