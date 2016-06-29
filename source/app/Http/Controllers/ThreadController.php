@@ -63,8 +63,28 @@ class ThreadController extends BaseController
     public function store(Request $request)
     {
         //
-        
-        
+        if(Auth::check()&&Auth::user()->isAdmin){
+            
+            $validator = Validator::make($request->all(), [
+            'title' => trim($request->input('title')),
+            'title' => 'required|unique:threads|max:255'
+             ]);        
+            
+        }
+        else{
+            $validator = Validator::make($request->all(), [
+                'title' => trim($request->input('title')),
+                'title' => 'required|unique:threads|max:255',
+                'email' => 'required|email|max:255',
+                'username' => 'required|max:255',
+            ]);        
+        }
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                        ->withErrors($validator,'createThreadErrors')
+                        ->withInput();
+        }
         $thread=new Thread;
         $thread->title=trim($request->input('title'));
         $thread->title=htmlspecialchars(preg_replace("/\s+/", " ", $thread->title));
@@ -72,8 +92,10 @@ class ThreadController extends BaseController
         $thread->content=htmlspecialchars(preg_replace("/\s+/", " ", $thread->content));
         $thread->tUrl=ThreadController::createUrl($thread->title);
         $existingSameThread=Thread::where(['tUrl'=>$thread->tUrl,'moderated'=>1])->get()->first();
+
         if(!empty($existingSameThread)){
-            $url="/threads/".$thread->tUrl;
+            // die("---".$thread->tUrl);
+            $url="/forum/".$thread->tUrl;
             //var_dump($url);
             return redirect($url);
         }
@@ -87,6 +109,7 @@ class ThreadController extends BaseController
         }else{
             $thread->email=$request->input('email');    
         }
+        $thread->username=$request->input('username');
         $thread->save();
         return Redirect::back()->withErrors(["Your post is awaiting moderators approval", 'flag']);
 

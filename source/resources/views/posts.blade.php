@@ -40,7 +40,7 @@
                     <hr class="noPad">
                 @endif
                 <div class="row" style="padding-top:20px">
-                    <button id="new-thread-button" class="btn" data-toggle="modal" data-target="#myModalThread">Post</button>
+                    <button id="new-thread-button" class="btn" data-toggle="modal" data-target="#myModalPost">Post</button>
                 </div>
             </div>
         </div>

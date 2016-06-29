@@ -16,9 +16,9 @@ class CreateThreadsTabl extends Migration
             //
             $table->increments('id');
             $table->string('title')->unique()->nullable(false);
-            // $table->integer('gId')->unsigned()->nullable(false);
             $table->string('tUrl')->nullable(false)->unique();
             $table->longText('content');
+            $table->string('username')->nullable(true);
             $table->string('email');
             $table->enum('moderated', array(0,1))->default(0);
             $table->timestamps();

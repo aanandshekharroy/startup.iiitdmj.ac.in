@@ -14,9 +14,13 @@
                             <div class="modal-body">
                                 @if(Auth::guest()||!Auth::user()->isAdmin)
                                     <fieldset class="form-group">
+                                    <label for="exampleInputEmail1">Name: </label>
+                                    <input name="username" class="form-control" id="exampleInputEmail1" required placeholder="Enter your name" value="{{ old('username') }}">
+                                    </fieldset> 
+                                    <fieldset class="form-group">
                                         
                                         <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                        <input type="email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Enter email" value="{{ old('email') }}">
                                     </fieldset>
                                 @endif
 
@@ -24,17 +28,15 @@
                               <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                               <fieldset class="form-group">
                                 <label for="exampleTextarea">Title</label>
-                                <input required class="form-control" name="title" id="exampleTextarea" rows="3"/>
+                                <input required value="{{ old('title') }}" class="form-control" name="title" id="exampleTextarea" rows="3"/>
                               </fieldset>
                               <fieldset class="form-group">
                                 <label for="exampleTextarea">Description</label>
-                                <textarea class="form-control" name="content" id="exampleTextarea" rows="3"></textarea>
+                                <textarea class="form-control" value="{{ old('content') }}" name="content" id="exampleTextarea" rows="3"></textarea>
                               </fieldset>
                               <button type="submit" class="btn new-thread-button">Submit</button>
-                                <!-- <input type="hidden" name="_token" value="{{{ csrf_token() }}}" /> -->
-                                <!-- <label for="typeahead"></label> -->
-                                <!-- <input type="text"  class="form-control" placeholder="Thread title" type="text" name="title" required> -->
-                                <!-- <textarea type="text" name="content" class="form-control" placeholder="Description"></textarea> -->
+                               @include('layouts.allFormErrors')
+
                                 
                             </div>
                 

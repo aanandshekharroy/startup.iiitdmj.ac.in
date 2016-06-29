@@ -15,7 +15,9 @@
               <table id="box-table-b" >
                 <tbody>
                   <tr>
+
                     <td>The Institute invites your proposals for possible funding under the Startup Centre granted to the Institute as per the following schedule: <br /><br />
+
                        <ul style="margin-left:26px;">
                         <li> <img src="images/New_animated.gif" /> <a href="/docs/EOI-list.xlsx">List of Expression of Interest receipt</a></li></ul>
                         <ul style="margin-left:26px;">
@@ -25,10 +27,12 @@
                                     <li>    Background work done</li>
                                     <li>    Problem identification</li>
                                     <li>    Brief Technical write-up</li>
-                                </ul>  <strong>Last date of submission - <strike>June 06, 2016 </strike></strong></li>
-                                <li>Detailed proposal, including proposed Business Model <br /> <strong>Last date of submission - <span style="color:#FF0000;"> July 15, 2016 </span></strong></li>
+
+                                </ul>  <strong>Last date of submission - <strike>June 06, 2016 </strike></strong></li>
+                                <li>Detailed proposal, including proposed Business Model <br /> <strong>Last date of submission - <span style="color:#FF0000;"> July 15, 2016 </span></strong></li>
                             </ul>
-                            <p><br />Kindly send your proposal to <a href="mailto:startup@iiitdmj.ac.in">startup@iiitdmj.ac.in.</a></p>
+                            <p><br />Kindly send your proposal to <a href="mailto:startup@iiitdmj.ac.in">startup@iiitdmj.ac.in.</a></p>
+
                             <br /></td>
                         </tr>
                     </tbody>
@@ -40,12 +44,6 @@
           <p align="justify"> This initiative aims at fostering entrepreneurship and promoting innovation by creating an ecosystem that is conducive for growth of Start-ups. The objective is that India must become a nation of job creators instead of being a nation of job seekers. <br /><br />
           </p>
       </div>
-       <div class="article">
-          <h2 class="main_heading"><span>Welcome to Startup IIITDM Jabalpur</span></h2>
-          <div class="clr"></div>
-          <p align="justify"> This initiative aims at fostering entrepreneurship and promoting innovation by creating an ecosystem that is conducive for growth of Start-ups. The objective is that India must become a nation of job creators instead of being a nation of job seekers. <br /><br />
-          </p>
-        </div>
     <div class="article">
       <h2 class="main_heading"><span>What is a Startup </span></h2>
       <div class="clr"></div>
@@ -160,39 +158,27 @@
 
 
          <!-- <ul class="sb_menu">
-
-
-
             
-
-
-
             <li><a href="https://www.easychair.org/account/signin.cgi?conf=care2013" target="_blank" style="color:#61c0ec;"><img src="images/b10Mj41363338225.gif" width="210" height="32" style="border:1px solid #b7b7b7;padding:4px;" /></a></li>
-
-
-
           
-
-
-
         </ul>-->
         <p><strong>Prof. Puneet Tandon</strong><br />
            Mechanical Engineering Discipline &amp; Design Discipline<br />
          
-           <strong>e-mail:</strong><a href="mailto:ptandon@iiitdmj.ac.in"> ptandon[at]iiitdmj.ac.in</a><br />
-           <strong>Tel.</strong> +91-761-2794411 <br />
+           <strong>e-mail:</strong><a href="mailto:ptandon@iiitdmj.ac.in"> ptandon[at]iiitdmj.ac.in</a><br />
+           <strong>Tel.</strong> +91-761-2794411 <br />
            <br />
            <strong>Dr. Sraban Kumar Mohanty</strong><br />
            Computer Science &amp; Engineering<br />
           
-           <strong>e-mail:</strong><a href="mailto:sraban@iiitdmj.ac.in"> sraban[at]iiitdmj.ac.in</a><br />
-           <strong>Tel.</strong> +91-761-2794224 <br />
+           <strong>e-mail:</strong><a href="mailto:sraban@iiitdmj.ac.in"> sraban[at]iiitdmj.ac.in</a><br />
+           <strong>Tel.</strong> +91-761-2794224 <br />
            <br />
            <strong>Dr. Sachin Kumar Jain</strong><br />
            Electronics &amp; Communication Engineering<br />
           
-           <strong>e-mail:</strong><a href="mailto:skjain@iiitdmj.ac.in"> skjain[at]iiitdmj.ac.in</a><br />
-          <strong>Tel.</strong> +91-761-2794468</p>
+           <strong>e-mail:</strong><a href="mailto:skjain@iiitdmj.ac.in"> skjain[at]iiitdmj.ac.in</a><br />
+          <strong>Tel.</strong> +91-761-2794468</p>
 
      </div>
      <div class="gadget" >
@@ -206,6 +192,7 @@
       <div class="clr"></div>
 
       <p><iframe width="280px" src="https://www.youtube.com/embed/02Vr6aHn8kM" frameborder="0" allowfullscreen></iframe></p>
+
 
 
 
@@ -231,5 +218,12 @@
 
 
 @include('layouts.createThreadForm')
-
+@if(Auth::guest()||!Auth::user()->isAdmin)
+    @if($errors->any())
+        <script type="text/javascript">
+            alert('{{$errors->first()}}')
+        </script>
+                
+    @endif
+@endif
 @endsection
