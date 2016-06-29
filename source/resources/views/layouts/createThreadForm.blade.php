@@ -15,7 +15,7 @@
                                 @if(Auth::guest()||!Auth::user()->isAdmin)
                                     <fieldset class="form-group">
                                     <label for="exampleInputEmail1">Name: </label>
-                                    <input name="username" class="form-control" id="exampleInputEmail1" required placeholder="Enter your name" value="{{ old('username') }}">
+                                    <input name="name" class="form-control" id="exampleInputEmail1" required placeholder="Enter your name" value="{{ old('username') }}">
                                     </fieldset> 
                                     <fieldset class="form-group">
                                         

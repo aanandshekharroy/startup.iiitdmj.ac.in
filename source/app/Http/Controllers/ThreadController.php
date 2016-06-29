@@ -76,7 +76,7 @@ class ThreadController extends BaseController
                 'title' => trim($request->input('title')),
                 'title' => 'required|unique:threads|max:255',
                 'email' => 'required|email|max:255',
-                'username' => 'required|max:255',
+                'name' => 'required|max:255',
             ]);        
         }
 
@@ -104,12 +104,13 @@ class ThreadController extends BaseController
             if(Auth::user()->isAdmin){
                 $thread->moderated=1;
                 $thread->email=Auth::user()->email;
+                $thread->name=Auth::user()->name;
                 $flag=1;        
             }
         }else{
-            $thread->email=$request->input('email');    
+            $thread->email=$request->input('email'); 
+            $thread->name=$request->input('name');   
         }
-        $thread->username=$request->input('username');
         $thread->save();
         return Redirect::back()->withErrors(["Your post is awaiting moderators approval", 'flag']);
 

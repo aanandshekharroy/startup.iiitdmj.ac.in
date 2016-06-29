@@ -26,7 +26,7 @@
                         <h3>{{$title}}</h3><h5>{{$des}}</h5>
                         <div class="row">
                             <div class="col-sm-6 pull-left thread-started-by" style="margin-left: -14px;">
-                                <font><i class="fa fa-user"></i>: {{$thread->username}}</font>&nbsp;&nbsp;
+                                <font><i class="fa fa-user"></i>: {{$thread->name}}</font>&nbsp;&nbsp;
                                 <font><i class="fa fa-envelope"></i>: {{$thread->email}}</font>
                             </div>
                             <div class="col-sm-6 thread-row-discussions">

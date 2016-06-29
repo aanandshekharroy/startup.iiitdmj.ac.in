@@ -20,7 +20,7 @@
                                 @if(Auth::guest()||!Auth::user()->isAdmin)
                                     <fieldset class="form-group">
                                     <label for="exampleInputEmail1">Name: </label>
-                                    <input name="username" class="form-control" id="exampleInputEmail1" required placeholder="Enter your name">
+                                    <input name="name" class="form-control" id="exampleInputEmail1" required placeholder="Enter your name">
                                     </fieldset> 
                                     <fieldset class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
