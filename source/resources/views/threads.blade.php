@@ -26,11 +26,12 @@
                         <h3>{{$title}}</h3><h5>{{$des}}</h5>
                         <div class="row">
                             <div class="col-sm-6 pull-left thread-started-by" style="margin-left: -14px;">
-                                <h6>Started by: {{$thread->email}}</h6>
+                                <font><i class="fa fa-user"></i>: {{$thread->username}}</font>&nbsp;&nbsp;
+                                <font><i class="fa fa-envelope"></i>: {{$thread->email}}</font>
                             </div>
                             <div class="col-sm-6 thread-row-discussions">
-                                <h6>No. of Posts: {{ count($thread->posts) }}
-                                </h6>
+                                <font><i class="fa fa-comments"></i>: {{ count($thread->posts) }}</font>&nbsp;&nbsp;
+                                <font><i class="fa fa-clock-o"></i>: {{ $thread->created_at->diffForHumans() }}</font>
                             </div>  
                         </div>                
                     </div>
