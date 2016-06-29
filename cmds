@@ -1,0 +1,23 @@
+
+sudo apt-get install git-core
+sudo apt-get install php5-cli
+
+
+curl -sS https://getcomposer.org/installer | php
+getcomposer.org
+getcomposer.org
+
+
+sudo mv composer.phar /usr/local/bin/composer
+composer create-project laravel/laravel {directory} 4.2 --prefer-dist
+
+
+sudo apt-get install php5-mcrypt
+sudo php5enmod mcrypt
+php -i | grep mcrypt
+
+
+sudo apt-get install php5-curl
+
+
+sudo apt-get -y install php5-mysql
