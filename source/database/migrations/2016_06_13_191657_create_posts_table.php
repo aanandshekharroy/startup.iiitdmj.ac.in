@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->integer('thread_id')->unsigned()->nullable(false);
             $table->longText('content');
             $table->string('email');
+            $table->string('username')->nullable(true);
             $table->enum('moderated', array(0,1))->default(0);
             $table->foreign('thread_id')->references('id')
             ->on('threads')

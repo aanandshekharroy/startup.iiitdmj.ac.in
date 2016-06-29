@@ -16,7 +16,13 @@ class DashboardController extends BaseController
     }
     public function index(){
     	$threads=Thread::where('moderated',0)->orderBy('created_at','DESC')->get();
+        $moderated_threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->get();
     	$posts=Post::where('moderated',0)->orderBy('created_at','DESC')->get();
-    	return view('dashboard')->with(['threads'=>$threads,'posts'=>$posts]);
+        $moderated_posts=Post::where('moderated',1)->orderBy('created_at','DESC')->get();
+    	return view('dashboard')
+        ->with(['threads'=>$threads
+            ,'posts'=>$posts
+            ,'moderated_threads'=>$moderated_threads
+            ,'moderated_posts'=>$moderated_posts]);
     }
 }

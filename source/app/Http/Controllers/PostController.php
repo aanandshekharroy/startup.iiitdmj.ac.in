@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Post;
 use Auth;
 use Redirect;
+use Validator;
 class PostController extends BaseController
 {
     /**
@@ -58,10 +59,24 @@ class PostController extends BaseController
     public function store(Request $request)
     {
         //
+        if(!(Auth::check()&&Auth::user()->isAdmin)){
+            $validator = Validator::make($request->all(), [
+            'email' => 'required|email|max:255',
+            'username' => 'required|max:255',
+            ]);
+
+            if ($validator->fails()) {
+                return redirect()->back()
+                            ->withErrors($validator,'createPostErrors')
+                            ->withInput();
+            }    
+        }
+        
         $post=new Post;
         $post->content=($request->input('content'));
         $post->thread_id=$request->input('tId');
         $post->email=$request->input('email');
+        $post->username=$request->input('username');
         if(Auth::check()){
             if(Auth::user()->isAdmin){
                 $post->moderated=1;
