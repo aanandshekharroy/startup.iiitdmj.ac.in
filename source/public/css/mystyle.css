@@ -1,3 +1,12 @@
+.pull-right{
+	text-align: right;
+	float: right;
+}
+
+.col8 {
+	padding-left: 0px !important;
+}
+
 h5{
   color: black !important;
 }
