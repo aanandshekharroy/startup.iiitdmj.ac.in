@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Post;
 use Auth;
 use Redirect;
+use Validator;
 class PostController extends BaseController
 {
     /**
