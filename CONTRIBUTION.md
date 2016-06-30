@@ -5,7 +5,9 @@ We love pull requests from everyone.
 
 Here are some ways *you* can contribute:
 
-* by devloping fully-responsive.
+* by devloping fully-responsive front-end.
+* by creating a feature of emailing user when the post is approved by moderator is not done.
+* by redesigning moderator's dashboard .
 * by reporting bugs
 * by suggesting new features
 * by writing or editing documentation
