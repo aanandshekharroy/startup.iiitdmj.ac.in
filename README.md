@@ -13,10 +13,11 @@
 5. `php artisan key:generate`
 6. `php artisan migrate`
 
+###Contribution
+See [CONTRIBUTION.md][https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/blob/master/CONTRIBUTION.md]
+
 ###Issues
-* Front-end of the website is not responsive.
-* Emailing user when the post is approved by moderator is not done.
-* Moderator's dashboard needs to be designed well.
+See [issues][https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/issues]
 
 
 ###License
