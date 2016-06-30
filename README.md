@@ -2,7 +2,7 @@
 
 
 ###Requirement
-* Laravel 5.1
+* Laravel 5.1 or above
 
 
 ###Installation
