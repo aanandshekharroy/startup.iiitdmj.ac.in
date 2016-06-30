@@ -14,10 +14,11 @@
 6. `php artisan migrate`
 
 ###Contribution
-See [CONTRIBUTION.md][https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/blob/master/CONTRIBUTION.md]
+We welcome everyone to contribute to this repository to make the institute's website better.
+See <a href="https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/blob/master/CONTRIBUTION.md">CONTRIBUTION.md</a>
 
 ###Issues
-See [issues][https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/issues]
+See <a href="https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/issues">issues</a>
 
 
 ###License
