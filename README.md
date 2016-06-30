@@ -22,4 +22,4 @@ See <a href="https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/issues">i
 
 
 ###License
-This code is provided under <a href="http://choosealicense.com/licenses/mit/">MIT License</a>
+This code is Copyright (c) 2016 Aanand Shekhar Roy, Rashi Karanpuria and IIITDM Jablpur. It is free software, and may be redistributed under the terms specified in the <a href="https://github.com/aanandshekharroy/startup.iiitdmj.ac.in/edit/master/License.md">License</a> file.
