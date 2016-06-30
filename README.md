@@ -8,7 +8,10 @@
 ###Installation
 1. Clone this repo.
 2. `cd IIITDMJ-CSE-Website/source`
-3. `composer install`
+3. Create/Setup .env file .
+4. `composer install`
+5. `php artisan key:generate`
+6. `php artisan migrate`
 
 ###Issues
 * Front-end of the website is not responsive.
