@@ -28,11 +28,11 @@ Ideally, a bug report should include a pull request with failing specs.
 [gist]: https://gist.github.com/
 
 ## Submitting a Pull Request
-1. [Fork][fork] the [official repository][repo].
-2. [Create a topic branch.][branch]
+1. Fork the [official repository][repo].
+2. Create a topic branch.
 3. Implement your feature or bug fix.
 4. Add, commit, and push your changes.
-5. [Submit a pull request.][pr]
+5. Submit a pull request.
 
 
 [repo]: https://github.com/aanandshekharroy/startup.iiitdmj.ac.in
