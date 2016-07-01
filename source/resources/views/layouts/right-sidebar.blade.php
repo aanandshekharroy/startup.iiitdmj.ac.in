@@ -11,13 +11,13 @@
                   <div class="gadget">
                     <h2 class="right_tabs"><span>Notices</span> </h2>
                     <div class="clr"></div>
-                        <ul class="sb_menu">
-                          <li><img src="/images/New_animated.gif"/> First Expert Lecture on Business Model and Startups<br> 
+                          <img src="/images/New_animated.gif"/>
+                          <p> First Expert Lecture on Business Model and Startups<br> 
                               Speaker: Mr. Himanshu Khare<br>
-                              Time: 1200 Noon,  5th July 2016
+                              Time: 1200 Noon,  5th July 2016<br>
                               <a href="/docs/Bio Data of Himanshu Khare.pdf">Brief CV</a>
-                          </li>
-                        </ul>
+                              </p>
+                          
                     </div>
                     <div class="gadget panel-gadget">
                       <h3 class="heading-threads">Have a Question ?</h3>
