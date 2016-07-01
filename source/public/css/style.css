@@ -423,6 +423,7 @@ margin:0 auto;
 }
 .heading-threads {
   color:#07864d !important;
+  font-weight: 800;
 }
 .btn-broad{
 	padding-left: 20px;
@@ -434,4 +435,5 @@ h3.heading-threads {
 }
 .panel-gadget > a{
 	color: #07864d;
+	font-weight: 600;
 }
