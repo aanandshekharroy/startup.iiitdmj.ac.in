@@ -133,7 +133,7 @@
                     {{--*/ $title = str_limit($thread->title, 20, '...') /*--}}
                     <div class="row thread-row" style="border-top: 1px solid grey"
                     onclick="window.location.href='/forum/{{$thread->tUrl}}'">
-                    <h4>{{$title}}</h4><h6>{{$des}}</h6>                
+                    <h4 style="color:#3e3d3d;">{{$title}}</h4><h6 style="color:#3e3d3d;">{{$des}}</h6>                
                     </div>
                     @endforeach
                     @else
