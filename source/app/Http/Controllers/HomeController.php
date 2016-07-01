@@ -19,8 +19,8 @@ class HomeController extends BaseController
         $this->middleware('auth',['only'=>['index']]);
     }
     public function welcome(){
-        $threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->take(3)->get();
-        return view('welcome')->with('threads',$threads);
+        // $threads=Thread::where('moderated',1)->orderBy('created_at','DESC')->take(3)->get();
+        return view('welcome');
     }
     /**
      * Show the application dashboard.
