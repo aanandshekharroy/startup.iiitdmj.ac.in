@@ -417,12 +417,13 @@ margin:0 auto;
 #list3 ul li { line-height:30px; }
 
 .panel-gadget {
-	border: 1px solid #e0dddd;
+	border: 1px solid #403c3c;
 	margin-left: 40px !important;
 	padding-left: 20px !important;
 }
 .heading-threads {
-  color:#ff8b14 !important;
+  color:#07864d !important;
+  font-weight: 800;
 }
 .btn-broad{
 	padding-left: 20px;
@@ -433,5 +434,6 @@ h3.heading-threads {
 	margin-bottom: 20px;
 }
 .panel-gadget > a{
-	color: #ff8b14;
+	color: #07864d;
+	font-weight: 600;
 }
