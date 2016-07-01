@@ -94,7 +94,7 @@
     </div>
 </div>
 
-     @include('layouts.right-sidebar')
+@include('layouts.right-sidebar')
 
  </div>
 
