@@ -21,4 +21,7 @@ class ExtrasController extends BaseController
     public function tax_benefits(){
     	return view('tax_benefits');
     }
+    public function workshop_1(){
+        return view('workshop_1');
+    }
 }
