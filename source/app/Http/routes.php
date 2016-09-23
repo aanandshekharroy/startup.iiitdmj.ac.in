@@ -24,3 +24,4 @@ Route::resource('forum','ThreadController');
 
 Route::get('/get-thread-url','ThreadController@getThreadUrl');
 Route::get('/dashboard','DashboardController@index');
+Route::get('/workshop-1','ExtrasController@workshop_1');

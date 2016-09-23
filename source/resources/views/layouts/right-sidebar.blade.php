@@ -12,13 +12,19 @@
                     <h2 class="right_tabs"><span>Notices</span> </h2>
                     <div class="clr"></div>
                           <img src="/images/New_animated.gif"/>
-                          <p> First Expert Lecture on Business Model and Startups<br> 
-                              Speaker: Mr. Himanshu Khare<br>
-                              Time: 1200 Noon,  5th July 2016<br>
-                              <a href="/docs/Bio Data of Himanshu Khare.pdf">Brief CV</a>
+                          <p> <strong>Workshop to be Conducted</strong><br />
+                              <a href="https://docs.google.com/forms/d/e/1FAIpQLScuKZjw78z45Nbnvg3PburejQyoDy7usbnDlGNpgA6BRwg-AA/viewform">Online Registration Form</a><br />
                               </p>
                           
+                    <div>
+                    <a href="/workshop-1">1.&nbsp;<span data-term="goog_1463009198" tabindex="0">September 29</span>, 30 and&nbsp;
+                    <span data-term="goog_1463009199" tabindex="0">October 1</span>
+                    &nbsp;to be conducted by Mr. Sarvesh Goorha and Dr. Loveneesh Chanana</a>
                     </div>
+                          <div><br />
+                          </div>
+                          <div>2.&nbsp;<span data-term="goog_1463009200" tabindex="0">October 5-7, 2016</span>&nbsp;to be conducted by Prof. Vinay Nangia and Dr. Samiksha Jain.</div>
+</div>
                     <div class="gadget panel-gadget">
                       <h3 class="heading-threads">Have a Question ?</h3>
                       <div class="text-center">
