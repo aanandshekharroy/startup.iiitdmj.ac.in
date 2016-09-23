@@ -7,7 +7,7 @@
 @section('content')
 <div class="content">
     <div class="content_resize">
-        <marquee scrollamount="3" behavior="alternate" style="color:#FF0000">Those who have submitted EOIs are invited to submit their detailed proposal including business model.</marquee>
+        <marquee scrollamount="3" behavior="alternate" > <a href="/docs/Startup Business Plan List update1.pdf">list of Business Plan</a> |  <a href="https://docs.google.com/forms/d/e/1FAIpQLScuKZjw78z45Nbnvg3PburejQyoDy7usbnDlGNpgA6BRwg-AA/viewform" style="color:#FF0000;">Workshop registration form</a></marquee>
         <div class="mainbar">
            <div class="article">
               <h2 class="main_heading"><span>Call for Proposals</span></h2>
@@ -29,7 +29,7 @@
                                     <li>    Brief Technical write-up</li>
 
                                 </ul>  <strong>Last date of submission - <strike>June 06, 2016 </strike></strong></li>
-                                <li>Detailed proposal, including proposed Business Model <br /> <strong>Last date of submission - <span style="color:#FF0000;"> July 15, 2016 </span></strong></li>
+                                <li>Detailed proposal, including proposed Business Model <br /> <strong>Last date of submission - <span style="color:#FF0000;"> July 25, 2016 </span></strong></li>
                             </ul>
                             <p><br />Kindly send your proposal to <a href="mailto:startup@iiitdmj.ac.in">startup@iiitdmj.ac.in.</a></p>
 
