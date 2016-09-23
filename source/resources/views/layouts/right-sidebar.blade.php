@@ -16,15 +16,12 @@
                               <a href="https://docs.google.com/forms/d/e/1FAIpQLScuKZjw78z45Nbnvg3PburejQyoDy7usbnDlGNpgA6BRwg-AA/viewform">Online Registration Form</a><br />
                               </p>
                           
-<<<<<<< HEAD
-                    <div>1.&nbsp;<span data-term="goog_1463009198" tabindex="0">September 29</span>, 30 and&nbsp;<span data-term="goog_1463009199" tabindex="0">October 1</span>&nbsp;to be conducted by Mr. Sarvesh Goorha and Dr. Loveneesh Chanana</div>
-=======
+                    
                     <div>
                     <a href="/workshop-1">1.&nbsp;<span data-term="goog_1463009198" tabindex="0">September 29</span>, 30 and&nbsp;
                     <span data-term="goog_1463009199" tabindex="0">October 1</span>
                     &nbsp;to be conducted by Mr. Sarvesh Goorha and Dr. Loveneesh Chanana</a>
                     </div>
->>>>>>> 68461dc096d6d236bd49970646ae8f97b04fa511
                           <div><br />
                           </div>
                           <div>2.&nbsp;<span data-term="goog_1463009200" tabindex="0">October 5-7, 2016</span>&nbsp;to be conducted by Prof. Vinay Nangia and Dr. Samiksha Jain.</div>
