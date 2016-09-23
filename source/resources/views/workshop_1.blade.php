@@ -55,10 +55,10 @@
           </tr>
         </table>
         <h3>Brief C.V. of Experts</h3>
-        <p><a href="#">Mr. Sarvesh K. Goorha</a></p>
-         <p><a href="#">Dr. Lovneesh Chanana</a></p>
-          <p><a href="#">Dr. Samiksha Jain</a></p>
-           <p><a href="#">Prof. Vinay K Nangia</a></p>
+        <p><a href="/docs/Mr. Sarvesh K Goorha profile 2016.pdf">Mr. Sarvesh K. Goorha</a></p>
+         <p><a href="/docs/Profile Dr. Lovneesh Chanana.pdf">Dr. Lovneesh Chanana</a></p>
+          <p><a href="/docs/Dr. Samiksha Jain Brief Profile.pdf">Dr. Samiksha Jain</a></p>
+           <p><a href="/docs/Prof. Vinay K Nangia Brief Profile.pdf">Prof. Vinay K Nangia</a></p>
         
  </div>
 
